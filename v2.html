@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SoundBoard</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-content: center;
+            height: 100vh;
+        }
+        
+        .card {
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .sound-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <button class="sound-button" onclick="playSound('prowler.mp3',.5)">The Prowler</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('moh.mp3',1)">Miguel O'Hara 2</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('tiresscreeching.mp3',.75)">Tires Screeching</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('crickets.mp3',.85)">Crickets</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('sadviolin.mp3',1)">Sad Violin</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('elevatormusic.mp3',.7)">Elevator Music</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('roasted.mp3',1)">Roasted</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('fbiopenup.mp3',1)">FBI Open UP</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('emodam.mp3',.7)">Emotional Damage</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('memefinal.mp3',1)">Meme Final</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('whatdogdoin.mp3',.6)">What da Dog Doin</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('error.mp3',.8)">Error</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('phonk.mp3',.8)">Phonk</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('runmeme.mp3',.8)">Run</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('Anime Wow.mp3',1)">Anime Wow</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('bruh.mp3',1)">Bruh</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('rucrazy.mp3',1)">Are You Crazy?</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('AMOGUSRoleR.mp3',1)">Amongus Role Reveal</button>
+        </div>
+        <div class="card">
+            <button class="sound-button" onclick="playSound('punch.mp3',1)">Gaming Punch</button>
+        </div>
+
+    </div>
+
+    <script>
+        function playSound(soundFile) {
+            var audio = new Audio(soundFile);
+
+            console.log(audio.volume);
+            audio.play();
+        }
+
+        function playSound(soundFile, vol) {
+            var audio = new Audio(soundFile);
+            audio.volume = vol;
+            console.log(audio.volume);
+            audio.play();
+        }
+    </script>
+</body>
+
+</html>

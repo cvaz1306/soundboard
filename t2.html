@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Audio Player with Waveform</title>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+
+<body>
+    <h1>Audio Player with Waveform</h1>
+    <audio id="audio" controls>
+        <source src="emodam.mp3" type="audio/mpeg">
+    </audio>
+    <div id="waveform"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio');
+            const wavesurfer = WaveSurfer.create({
+                container: '#waveform',
+                waveColor: 'blue',
+                progressColor: 'purple',
+                cursorColor: 'red',
+            });
+
+            wavesurfer.load(audio.src);
+        });
+    </script>
+</body>
+
+</html>
