@@ -162,7 +162,7 @@
         }
 
         function playSound(soundFile, vol) {
-            var audio = new Audio(soundFile);
+            var audio = new Audio("music/" + soundFile);
             audio.volume = vol;
             console.log(audio.volume);
             audio.play();
